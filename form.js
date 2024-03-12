@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const email = document.getElementById("email");
   const password = document.getElementById("password");
 
+  //error messages
   const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector(".error");
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     inputControl.classList.remove("error");
   };
 
+  //input values
   const validateInput = () => {
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
@@ -53,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  //sign up button
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     validateInput();
